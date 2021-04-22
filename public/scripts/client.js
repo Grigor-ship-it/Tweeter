@@ -110,8 +110,18 @@ loadTweets();
 
 
 $("form").submit(function( event ) { 
+  console.log("submission")
   event.preventDefault();
- 
+  $(".error").slideUp() 
+  const textArea = $("#tweet-text").val();
+
+  if (!textArea) {
+    $(".container").append(`<div class="error">Your Tweet is empty. Cannot Tweet empty string.</div>`)
+    $(".error").addClass("error-message");
+    $(".error").slideDown() 
+    return
+  }
+
   let text = $( this ).serialize()
   
  
@@ -119,9 +129,7 @@ $("form").submit(function( event ) {
   .then(() => {loadTweets()}
  
   )
-  .fail(function(){
-    alert("Your Tweet message is empty")
-  })
+  
   
   timeago.render(document.querySelectorAll('.need_to_be_rendered'));
   
