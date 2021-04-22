@@ -1,6 +1,6 @@
 .container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   padding: 34px;
-
+  padding-top: 24px;
 }
 form{
 display: flex;
@@ -79,3 +79,24 @@ input:focus {
   font-family: "Bungee";
 
 }
+
+
+
+
+.error-message {
+  word-wrap: break-word;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: none;
+  height: 45px;
+  margin-left: 34px;
+  margin-right: 34px;
+  text-align: center;
+  background-color: inherit;
+  border: solid 1px red;
+  border-width: 5px;
+  color: red;
+  order: -1;
+  height: fit-content;
+}
+

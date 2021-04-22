@@ -26,3 +26,39 @@ nav {
   align-items: center;
   
 }
+
+@media screen and (max-width: 768px) {
+  
+  nav {
+    height: 120px;
+    background-color: gold;
+    color: #FFF;
+    width: auto;
+    z-index: 1;
+   
+  
+  }
+  
+  .navBar {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+    justify-content: space-between;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-3.png");
+  }
+  
+  .navBar2 {
+    display: flex;
+    padding-right: 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://www.transparenttextures.com/patterns/paper-3.png");
+  }
+  
+
+
+
+}

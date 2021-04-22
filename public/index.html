@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -40,10 +42,16 @@
 
     <!-- External JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"></script>
-
+    
+    <!-- Eternal JS -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"
+  ></script>
 
   </head>
-
+  
   <body>
     <!-- Top nav bar (fixed) -->
     <nav style="font-family:Bungee;" class="navBar">
@@ -63,7 +71,8 @@
       </div>
   </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+    <!-- <section class="global-tweets"> -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
@@ -79,5 +88,7 @@
     </section>
     <div id="tweets-container">
     </div>
+  <!-- </section> -->
+  </main>
   </body>
 </html>

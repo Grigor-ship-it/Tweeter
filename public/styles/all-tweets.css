@@ -8,7 +8,7 @@
 }
 
 .tweet-message{
- 
+  word-wrap: break-word;
   margin: 10px;
   border: solid;
   border-top: 0px none; 

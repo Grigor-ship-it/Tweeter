@@ -110,9 +110,10 @@ loadTweets();
 
 
 $("form").submit(function( event ) { 
-  console.log("submission")
+  
   event.preventDefault();
-  $(".error").slideUp() 
+ 
+  $(".error").remove();
   const textArea = $("#tweet-text").val();
 
   if (!textArea) {
