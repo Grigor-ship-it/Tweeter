@@ -57,6 +57,11 @@ const renderTweets = function(tweets) {
      $('#tweets-container').prepend(createTweetElement(tweet));
   }
 }
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function(data) {
   const username = data.user.name;
@@ -73,7 +78,7 @@ let $tweet =
   <output name="username" class="username" for="all-tweets">${username}</output> </div>
   <output name="loginfo" class="loginfo" for="all-tweets">${handle}</output>
 </header>
-<div class="tweet-message">${tweetContent}</div>
+<div class="tweet-message">${escape(tweetContent)}</div>
 <footer><span class="need_to_be_rendered" datetime="${date}">${moment(data.created_at).fromNow()}</span>
   <div class="icons">
   <i class="fas fa-flag"></i>
@@ -108,7 +113,7 @@ $("form").submit(function( event ) {
   event.preventDefault();
  
   let text = $( this ).serialize()
-  console.log(text)
+  
  
   $.ajax( "/tweets/", {method: "POST",data: text})
   .then(() => {loadTweets()}
