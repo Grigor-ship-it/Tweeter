@@ -74,7 +74,7 @@ let $tweet =
   <output name="loginfo" class="loginfo" for="all-tweets">${handle}</output>
 </header>
 <div class="tweet-message">${tweetContent}</div>
-<footer><span class="need_to_be_rendered" datetime="${date}";><b>July 07, 2016</b></span>
+<footer><span class="need_to_be_rendered" datetime="${date}">${moment(data.created_at).fromNow()}</span>
   <div class="icons">
   <i class="fas fa-flag"></i>
   <i class="fas fa-retweet"></i>
@@ -94,7 +94,7 @@ const loadTweets = function() {
 }
 
 $(document).ready(function() {
-
+  
 
 loadTweets();
 
@@ -107,21 +107,22 @@ loadTweets();
 $("form").submit(function( event ) { 
   event.preventDefault();
  
-  let text = ( $( this ).serialize())
+  let text = $( this ).serialize()
   console.log(text)
  
   $.ajax( "/tweets/", {method: "POST",data: text})
-  .then(
-    $.get("/tweets/", function(data, status) {
-      renderTweets(data)
-    })
+  .then(() => {loadTweets()}
+ 
   )
   .fail(function(){
     alert("Your Tweet message is empty")
   })
   
+  timeago.render(document.querySelectorAll('.need_to_be_rendered'));
+  
   $("#tweet-text").val('');
-
+  $(".counter").val(140);
+  
 });
 })
 
