@@ -120,7 +120,7 @@ $("form").submit(function( event ) {
     alert("Your Tweet message is empty")
   })
   
-  
+  $("#tweet-text").val('');
 
 });
 })
