@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/all-tweets.css" type="text/css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous"></script>
+
+
+  </head>
+
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav style="font-family:Bungee;" class="navBar">
+      <span>tweeter</span>
+      <nav style="font-family:Source Sans Pro;" class="navBar2">
+      <span><b>Write</b> a new tweet</span>
+      <i class="fas fa-angle-double-down" style="color:Red"></i>
+      </nav>
+    </nav>
+   <header class="header">
+      <div class="img" >
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>    
+      <div>
+          <h2><b>James</b> Bond</h2>
+      </div>
+  </header>
+    <!-- Page-specific (main) content here -->
+    <main class="container"></main>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST">
+        <label for="tweet-text"><b class="text">What are you humming about?</b></label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div class="footer">
+          <div><button type="submit" class="button">Tweet</button>  </div>
+          <div></div>
+          <div></div>
+          <div> <output name="counter" class="counter" for="tweet-text">140</output></div>                          
+        </div>
+      </form>
+    </section>
+    <div id="tweets-container">
+    </div>
+  </body>
+</html>

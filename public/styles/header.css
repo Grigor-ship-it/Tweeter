@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  background-color: #ffd900;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-3.png");
+  margin-top: 120px;
+}
+
+
+
+

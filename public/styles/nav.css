@@ -1,0 +1,28 @@
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFF;
+  width: auto;
+  z-index: 1;
+
+
+}
+
+.navBar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 36px;
+  justify-content: space-between;
+}
+
+.navBar2 {
+  display: flex;
+  padding-right: 36px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
