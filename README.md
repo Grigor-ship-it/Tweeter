@@ -2,9 +2,9 @@ A twitter clone by Lighthouse Labs for web bootcamp students to learn front-end 
 
 ## Final Product
 
-!["Screenshot of desktop view"](https://github.com/Grigor-ship-it/tinyapp/blob/master/docs/urls-register.png?raw=true)
-!["Screenshot of tablet view"](https://github.com/Grigor-ship-it/tinyapp/blob/master/docs/urls-page-empty.png?raw=true)
-!["Screenshot of mobile view"](https://github.com/Grigor-ship-it/tinyapp/blob/master/docs/urls-page.png?raw=true)
+!["Screenshot of desktop view"](https://github.com/Grigor-ship-it/Tweeter/blob/master/imgs/Screenshot%20from%202021-04-22%2019-33-46.png?raw=true)
+!["Screenshot of tablet view"](https://github.com/Grigor-ship-it/Tweeter/blob/master/imgs/tablet.png?raw=true)
+!["Screenshot of mobile view"](https://github.com/Grigor-ship-it/Tweeter/blob/master/imgs/mobile.png?raw=true)
 
 
 ## Dependencies
